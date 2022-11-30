@@ -35,7 +35,6 @@ class FirstAdapter(
 
         fun onBind(mainModel: RecyclerModel) {
             binding.tvName.text = mainModel.name
-            binding.root.tag = mainModel
         }
     }
 }

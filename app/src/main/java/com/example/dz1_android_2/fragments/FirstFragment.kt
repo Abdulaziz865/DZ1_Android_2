@@ -44,11 +44,7 @@ class FirstFragment : Fragment() {
     }
 
     private fun onClickListener(model: RecyclerModel) {
-        findNavController().navigate(
-            FirstFragmentDirections.actionMainFragmentToDetailFragment(
-                model.name
-            )
-        )
+        findNavController().navigate(FirstFragmentDirections.actionMainFragmentToDetailFragment(model.name))
     }
 
     override fun onDestroy() {

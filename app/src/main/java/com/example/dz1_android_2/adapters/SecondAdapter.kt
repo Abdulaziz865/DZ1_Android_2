@@ -37,7 +37,6 @@ class SecondAdapter(
             Glide.with(binding.ivImagePhoto.context)
                 .load(model.image)
                 .into(binding.ivImagePhoto)
-            binding.root.tag = model
         }
     }
 }

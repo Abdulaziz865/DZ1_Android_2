@@ -18,7 +18,7 @@ class DetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentDetailBinding.inflate(layoutInflater)
+        binding = FragmentDetailBinding.inflate(inflater, container,false)
         return binding?.root
     }
 
