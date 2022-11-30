@@ -47,13 +47,9 @@ class FirstFragment : Fragment() {
         findNavController().navigate(FirstFragmentDirections.actionMainFragmentToDetailFragment(model.name))
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        binding = null
-    }
-
     override fun onDestroyView() {
         super.onDestroyView()
         modelArrayList.clear()
+        binding = null
     }
 }

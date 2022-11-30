@@ -31,8 +31,8 @@ class DetailFragment : Fragment() {
         binding?.tvNameText?.text = argsNavigation.name
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
+        super.onDestroyView()
         binding = null
     }
 }
