@@ -13,7 +13,8 @@ class SecondAdapter(
 ) : RecyclerView.Adapter<SecondAdapter.SecondViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SecondViewHolder {
-        val binding = ItemImagePersonBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            ItemImagePersonBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return SecondViewHolder(binding)
     }
 
@@ -33,6 +34,7 @@ class SecondAdapter(
                 clickListener(listArray[bindingAdapterPosition])
             }
         }
+
         fun onBind(model: RecyclerModel) {
             Glide.with(binding.ivImagePhoto.context)
                 .load(model.image)

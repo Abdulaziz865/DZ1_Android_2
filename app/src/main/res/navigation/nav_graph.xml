@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_mainFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_detailImageFragment"
+            app:destination="@id/detailImageFragment" />
     </fragment>
 
     <fragment
@@ -23,6 +26,16 @@
         <argument
             android:name="name"
             app:argType="string"
-            android:defaultValue="Default" />
+            android:defaultValue=""/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailImageFragment"
+        android:name="com.example.dz1_android_2.fragments.DetailImageFragment"
+        android:label="DetailImageFragment" >
+        <argument
+            android:name="image"
+            app:argType="string"
+            android:defaultValue=""/>
     </fragment>
 </navigation>

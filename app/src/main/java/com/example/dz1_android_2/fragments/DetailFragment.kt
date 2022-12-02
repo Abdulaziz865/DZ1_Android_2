@@ -1,10 +1,10 @@
 package com.example.dz1_android_2.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.example.dz1_android_2.databinding.FragmentDetailBinding
 
@@ -18,7 +18,7 @@ class DetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentDetailBinding.inflate(inflater, container,false)
+        binding = FragmentDetailBinding.inflate(inflater, container, false)
         return binding?.root
     }
 

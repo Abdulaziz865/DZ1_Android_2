@@ -17,8 +17,8 @@ class FirstFragment : Fragment() {
 
     private var binding: FragmentFirstBinding? = null
     private val repository = RecyclerRepository()
-    private var firstAdapter: FirstAdapter? = null
-    private var secondAdapter: SecondAdapter? = null
+    private var imageAdapter: FirstAdapter? = null
+    private var nameAdapter: SecondAdapter? = null
     private lateinit var modelArrayList: ArrayList<RecyclerModel>
 
     override fun onCreateView(
@@ -37,14 +37,26 @@ class FirstFragment : Fragment() {
 
     private fun initialize() {
         modelArrayList = repository.getListData()
-        firstAdapter = FirstAdapter(modelArrayList, this::onClickListener)
-        secondAdapter = SecondAdapter(modelArrayList, this::onClickListener)
-        val concatAdapter = ConcatAdapter(firstAdapter, secondAdapter)
+        imageAdapter = FirstAdapter(modelArrayList, this::onClickListener)
+        nameAdapter = SecondAdapter(modelArrayList, this::onClickListenerImage)
+        val concatAdapter = ConcatAdapter(nameAdapter, imageAdapter)
         binding?.rvListOfName?.adapter = concatAdapter
     }
 
+    private fun onClickListenerImage(model: RecyclerModel) {
+        findNavController().navigate(
+            FirstFragmentDirections.actionFirstFragmentToDetailImageFragment(
+                model.image
+            )
+        )
+    }
+
     private fun onClickListener(model: RecyclerModel) {
-        findNavController().navigate(FirstFragmentDirections.actionMainFragmentToDetailFragment(model.name))
+        findNavController().navigate(
+            FirstFragmentDirections.actionMainFragmentToDetailFragment(
+                model.name
+            )
+        )
     }
 
     override fun onDestroyView() {

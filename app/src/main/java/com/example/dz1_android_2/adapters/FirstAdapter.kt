@@ -12,7 +12,8 @@ class FirstAdapter(
 ) : RecyclerView.Adapter<FirstAdapter.FirstViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FirstViewHolder {
-        val binding = ItemNamePersonBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            ItemNamePersonBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return FirstViewHolder(binding)
     }
 
@@ -33,8 +34,8 @@ class FirstAdapter(
             }
         }
 
-        fun onBind(mainModel: RecyclerModel) {
-            binding.tvName.text = mainModel.name
+        fun onBind(model: RecyclerModel) {
+            binding.tvName.text = model.name
         }
     }
 }

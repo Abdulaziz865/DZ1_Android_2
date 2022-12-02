@@ -7,6 +7,7 @@ class RecyclerRepository {
     private val list = arrayListOf<RecyclerModel>()
 
     fun getListData(): ArrayList<RecyclerModel> {
+
         list.add(
             RecyclerModel(
                 "https://softech.kg/image/catalog/Products/Phones/Apple/14%20Pro%20Max/1%D1%84.jpg",
